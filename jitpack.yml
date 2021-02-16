@@ -1,0 +1,7 @@
+jdk:
+  - openjdk8
+install:
+  - echo "Building non-compose artifacts"
+  - ./gradlew clean install -xtest
+  - echo "Building compose artifacts"
+  - ./gradlew clean install -xtest -PuseCompose=true
